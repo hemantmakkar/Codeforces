@@ -13,8 +13,16 @@ int main(){
             price+=x*b;
         else if(m>n)
             price = min(n*a, b);
-        else
-            price = (a>b) ? x*b+b : x*b+y*a;
+        else{
+            if(a>b)
+                price=x*b+b;
+            else{
+            if(y*a >b)
+                price=x*b+b;
+            else
+                price = x*b+y*a;
+            }
+        }
     }
     else 
         price=n*a;
